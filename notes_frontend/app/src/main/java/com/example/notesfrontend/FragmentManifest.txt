@@ -1,0 +1,2 @@
+# This file is just a placeholder to ensure the directory is seen by IDE tools.
+# All fragments are in the com.example.notesfrontend package.

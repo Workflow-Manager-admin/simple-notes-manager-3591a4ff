@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notesListFragment">
+
+    <fragment
+        android:id="@+id/notesListFragment"
+        android:name="com.example.notesfrontend.NotesListFragment"
+        android:label="@string/notes"
+        tools:layout="@layout/fragment_notes_list" >
+        <action
+            android:id="@+id/action_notesListFragment_to_editNoteFragment"
+            app:destination="@id/editNoteFragment" />
+        <action
+            android:id="@+id/action_notesListFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.example.notesfrontend.AddEditNoteFragment"
+        android:label="@string/add_note"
+        tools:layout="@layout/fragment_add_edit_note" >
+        <argument android:name="noteId" app:argType="string" android:defaultValue="" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNoteFragment"
+        android:name="com.example.notesfrontend.AddEditNoteFragment"
+        android:label="@string/edit_note"
+        tools:layout="@layout/fragment_add_edit_note" >
+        <argument android:name="noteId" app:argType="string" android:defaultValue="" />
+    </fragment>
+</navigation>
